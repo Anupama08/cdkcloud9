@@ -210,8 +210,8 @@
                   "Version": "1"
                 },
                 "Configuration": {
-                  "Owner": "GITHUB-OWNER",
-                  "Repo": "GITHUB-REPO",
+                  "Owner": "Anupama08",
+                  "Repo": "cdkcloud9",
                   "Branch": "master",
                   "OAuthToken": "{{resolve:secretsmanager:GITHUB_TOKEN_NAME:SecretString:::}}",
                   "PollForSourceChanges": true
@@ -240,7 +240,7 @@
                   "ProjectName": {
                     "Ref": "PipelineBuildSynthCdkBuildProject6BEFA8E6"
                   },
-                  "EnvironmentVariables": "[{\"name\":\"_PROJECT_CONFIG_HASH\",\"type\":\"PLAINTEXT\",\"value\":\"a538b65d98bd10c25e6763c03a1adc9c15b75ac2bb8618fcebd0d316497c20b9\"}]"
+                  "EnvironmentVariables": "[{\"name\":\"_PROJECT_CONFIG_HASH\",\"type\":\"PLAINTEXT\",\"value\":\"bcfcc544f1c8179853e2bbfbf411b865a96d0f9a9cda09c8ac73f5c8994c300c\"}]"
                 },
                 "InputArtifacts": [
                   {
@@ -576,7 +576,7 @@
           ]
         },
         "Source": {
-          "BuildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"pre_build\": {\n      \"commands\": [\n        \"npm ci\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"npm run build\",\n        \"npx cdk synth\"\n      ]\n    }\n  },\n  \"artifacts\": {\n    \"base-directory\": \"cdk.out\",\n    \"files\": \"**/*\"\n  }\n}",
+          "BuildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"pre_build\": {\n      \"commands\": [\n        \"npm ci\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"echo \\\"hello\",\n        \"npx cdk synth\"\n      ]\n    }\n  },\n  \"artifacts\": {\n    \"base-directory\": \"cdk.out\",\n    \"files\": \"**/*\"\n  }\n}",
           "Type": "CODEPIPELINE"
         },
         "EncryptionKey": {

@@ -18,7 +18,9 @@ export class MyPipelineStack extends Stack {
       sourceAction: new codepipeline_actions.GitHubSourceAction({
         actionName: 'GitHub',
         output: sourceArtifact,
-        oauthToken: SecretValue.secretsManager('GITHUB_TOKEN_NAME'),
+        oauthToken: SecretValue.secretsManager('GITHUB_TOKEN_NAME', {
+          jsonField: 'GITHUB_TOKEN_NAME'
+        }),
         trigger: codepipeline_actions.GitHubTrigger.POLL,
         // Replace these with your actual GitHub project info
         owner: 'Anupama08',
@@ -31,7 +33,7 @@ export class MyPipelineStack extends Stack {
 
         // Use this if you need a build step (if you're not using ts-node
         // or if you have TypeScript Lambdas that need to be compiled).
-        buildCommand: 'npm run build',
+        buildCommand: 'echo "hello',
       }),
     });
   }
