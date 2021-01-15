@@ -212,7 +212,7 @@
                 "Configuration": {
                   "Owner": "Anupama08",
                   "Repo": "cdkcloud9",
-                  "Branch": "master",
+                  "Branch": "main",
                   "OAuthToken": "{{resolve:secretsmanager:GITHUB_TOKEN_NAME:SecretString:GITHUB_TOKEN_NAME::}}",
                   "PollForSourceChanges": true
                 },
