@@ -308,7 +308,7 @@
                                   "ProjectName": {
                                     "Ref": "PipelineBuildSynthCdkBuildProject6BEFA8E6"
                                   },
-                                  "EnvironmentVariables": "[{\"name\":\"_PROJECT_CONFIG_HASH\",\"type\":\"PLAINTEXT\",\"value\":\"bcfcc544f1c8179853e2bbfbf411b865a96d0f9a9cda09c8ac73f5c8994c300c\"}]"
+                                  "EnvironmentVariables": "[{\"name\":\"_PROJECT_CONFIG_HASH\",\"type\":\"PLAINTEXT\",\"value\":\"135fabc4d9d34e34b2b14c786eb03eaa6aa9e75cb0e2c00cacc302dc34337b9e\"}]"
                                 },
                                 "runOrder": 1,
                                 "roleArn": {
@@ -680,7 +680,7 @@
                                     },
                                     "source": {
                                       "type": "CODEPIPELINE",
-                                      "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"pre_build\": {\n      \"commands\": [\n        \"npm ci\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"echo \\\"hello\",\n        \"npx cdk synth\"\n      ]\n    }\n  },\n  \"artifacts\": {\n    \"base-directory\": \"cdk.out\",\n    \"files\": \"**/*\"\n  }\n}"
+                                      "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"pre_build\": {\n      \"commands\": [\n        \"npm ci\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"echo \\\"hello\\\"\",\n        \"npx cdk synth\"\n      ]\n    }\n  },\n  \"artifacts\": {\n    \"base-directory\": \"cdk.out\",\n    \"files\": \"**/*\"\n  }\n}"
                                     },
                                     "encryptionKey": {
                                       "Fn::GetAtt": [
