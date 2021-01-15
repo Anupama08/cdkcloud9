@@ -25,6 +25,7 @@ export class MyPipelineStack extends Stack {
         // Replace these with your actual GitHub project info
         owner: 'Anupama08',
         repo: 'cdkcloud9',
+        branch: 'main'
       }),
 
       synthAction: SimpleSynthAction.standardNpmSynth({
